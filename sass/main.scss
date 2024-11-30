@@ -1,0 +1,57 @@
+// CUSTOM
+@import "media";
+@import "variables";
+@import "navbar";
+@import "footer";
+@import "classes";
+@import "font";
+@import "box";
+@import "login";
+@import "read";
+
+// API
+@import "https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css";
+
+// DEFAULTS
+
+* {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 24px;
+    background-color: $dark-bg;
+    color: $dark-color;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: $dark-bg;
+
+}
+
+a {
+    text-decoration: none;
+    color: $dark-color;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+i {
+    font-size: 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}

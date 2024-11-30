@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="tr" class="login-html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TryCatch &copy; Login</title>
+    <link rel="icon" type="image" href="asset/img/pin/trychatch.svg">
+
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="nav-cont">
+        <nav class="navbar">
+            <div class="left gap-3 flex">
+                <button class="openOffCanvasButton btn-class btn-large" onclick="openOffCanvas()"><i class="ri-menu-line"></i></button>
+                <button class="searchButton btn-class btn-large" onclick="openOffCanvas(), searchInputFocus()"><i class="ri-search-line"></i></button>
+            </div>
+            <div class="center flex">
+                <a href="index.html" class="img-button">
+                    <img src="asset/img/pin/trychatch.svg" title="TryCatch &copy;">
+                </a>
+            </div>
+            <div class="right gap-3 flex">
+                <a href="login.html" class="btn-class btn-large btn-back" style="font-weight: 600;">Kayıt Ol</a>
+                <a href="login.html" class="btn-class">Giriş Yap</a>
+            </div>
+
+            <div class="offcanvas-left-cont" onclick="openOffCanvas()">
+                <div class="offcanvas-left">
+                    <div class="searh-cont">
+                        <input type="search" placeholder="Ara: Makale, Haber...">
+                        <button class="btn-class"><i class="ri-search-line"></i></button>
+                    </div>
+                    <div class="sign-buttons">
+                        <a href="login.html" class="btn-class btn-large btn-back" style="font-weight: 600;">Kayıt Ol</a>
+                        <a href="login.html" class="btn-class">Giriş Yap</a>
+                    </div>
+                    <ul class="categories-leftbar">
+                        <li class="li-active"><a href="#"><i class="ri-home-2-line"></i> Blog</a></li>
+                        <li><a href="#"><i class="ri-newspaper-line"></i> Haberler</a></li>
+                        <div class="drop-down">
+                            <li><a class="drop-down-btn">Kategoriler<i class="ri-arrow-up-s-line"></i></a></li>
+                            <div class="dd-show" style="height: max-content;">
+                                <div class="drop-down">
+                                    <li><a class="drop-down-btn"><img src="asset/img/stock/webicon.png">WEB<i class="ri-arrow-down-s-line"></i></a></li>
+                                    <div class="dd-show">
+                                        <div class="drop-down">
+                                            <li><a class="drop-down-btn">Front-End<i class="ri-arrow-down-s-line"></i></a></li>
+                                            <div class="dd-show">
+                                                <li><a href="#"><img src="asset/img/stock/language_icons/html.png">HTML</a></li>
+                                                <li><a href="#"><img src="asset/img/stock/language_icons/css.png">CSS</a></li>
+                                                <li><a href="#"><img src="asset/img/stock/language_icons/js.png">JS</a></li>
+                                                <li><a href="#"><img src="asset/img/stock/language_icons/ts.png">TypeScript</a></li>
+                                                <li><a href="#"><img src="asset/img/stock/language_icons/sass.png">Sass</a></li>
+                                            </div>
+                                        </div>
+                                        <div class="drop-down">
+                                            <li><a class="drop-down-btn">Back-End<i class="ri-arrow-down-s-line"></i></a></li>
+                                            <div class="dd-show">
+                                                <li><a href="#"><img src="asset/img/stock/language_icons/csharp.png">C#</a></li>
+                                                <li><a href="#"><img src="asset/img/stock/language_icons/php.png">PHP</a></li>
+                                                <li><a href="#"><img src="asset/img/stock/language_icons/asp.png">Asp.Net</a></li>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="drop-down">
+                                    <li><a class="drop-down-btn"><img src="asset/img/stock/pcicon.png">PC<i class="ri-arrow-down-s-line"></i></a></li>
+                                    <div class="dd-show">
+                                        <li><a href="#"><img src="asset/img/stock/language_icons/csharp.png">C#</a></li>
+                                        <li><a href="#"><img src="asset/img/stock/language_icons/java.png">Java</a></li>
+                                        <li><a href="#"><img src="asset/img/stock/language_icons/python.png">Python</a></li>
+                                    </div>
+                                </div>
+                                <div class="drop-down">
+                                    <li><a class="drop-down-btn"><img src="asset/img/stock/mobilicon.png">Mobil<i class="ri-arrow-down-s-line"></i></a></li>
+                                    <div class="dd-show">
+                                        <li><a href="#">Android Studio</a></li>
+                                    </div>
+                                </div>
+                                <div class="drop-down">
+                                    <li><a class="drop-down-btn"><img src="asset/img/stock/dbicon.png">Veri Tabanı<i class="ri-arrow-down-s-line"></i></a></li>
+                                    <div class="dd-show">
+                                        <li><a href="#"><img src="asset/img/stock/language_icons/sql.png">SQL</a></li>
+                                        <li><a href="#">MSQL</a></li>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="hr-line"></div>
+        
+        <div class="hr-line"></div>
+    </div>
+    <main class="content login">
+        <div class="login-cont">
+            <div class="left">
+                <img src="asset/img/pin/trychatch.svg">
+                <h2>Oturum Açın</h2>
+                <p>TRYCatch hesabınızı yönetin 😎</p>
+            </div>
+            <form action="POST" class="right">
+                <h3><i class="ri-terminal-fill"></i> Giriş Yap</h3>
+                <div class="input-group" style="display: block !important;">
+                    <span class="text-placeholder">E-posta adresi</span>
+                    <input type="email" autocomplete="off">
+                </div>
+                <div class="input-group">
+                    <span class="text-placeholder">Parola</span>
+                    <input type="password" autocomplete="off">
+                </div>
+                
+                <a href="#" class="forgot-password" style="display: none;"><i class="ri-question-line"></i> Parolamı unuttum</a>
+                <div class="buttons">
+                    <a href="register.html" class="btn-add btnm register">Hesap Oluşturun</a>
+                    <a onclick="prevInputFunction()" class="btn-add btn-prev btnm" style="display: none;">Geri</a>
+                    <a onclick="nextInputFunction()" class="btnm btn-login btn-back">Devam Et</a>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="js/media.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/alert.js"></script>
+    <script src="js/input.js"></script>
+</body>
+</html>
